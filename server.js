@@ -44,7 +44,7 @@ app.get('/', (req,res) => {
 //    res.send('<h1>hello Express</h1>');
     res.render('home.hbs',{
                pageTitle: 'Home Sweet Home',
-               welcomeMessage: 'welcome to my website'
+               welcomeMessage: 'Welcome to my Website'
                })
 });
 
@@ -53,7 +53,9 @@ app.get('/about', (req, res) =>{
         pageTitle: 'About Page'
     });
 });
-
+app.get('/projects', (req, res) =>{
+    res.render('projects.hbs')
+})
 
 app.get('/bad', (req, res) =>{
     res.send('<h1>error handling request</h1>');
